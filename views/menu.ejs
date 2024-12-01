@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+    <h1>Full Menu</h1>
+    <hr
+      style="
+        border: none;
+        border-top: 3px solid red;
+        height: 3px;
+        margin: 20px 0;
+      "
+    />
+    <h2>Mains</h2>
+    <% RESTAURANT.menu.forEach(element => { %> <% if (element.category ===
+    'mains'){ %>
+    <h4>
+      <%= element.name %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i> PRICE : $ <%= element.price %> </i>
+    </h4>
+    <h4>Rating : <%= element.rating %> <%if(element.rating === 5){%>⭐<%}%></h4>
+    <%= element.details %>
+    <hr
+      style="
+        border: none;
+        border-top: 3px dotted #ccc;
+        height: 1px;
+        margin: 20px 0;
+      "
+    />
+    <% } %> <% }); %>
+    <br />
+    <hr
+      style="
+        border: none;
+        border-top: 3px solid red;
+        height: 3px;
+        margin: 20px 0;
+      "
+    />
+    <h2>Desserts</h2>
+    <% RESTAURANT.menu.forEach(element => { %> <% if (element.category ===
+    'desserts'){ %>
+    <h4>
+      <%= element.name %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i> PRICE : $ <%= element.price %> </i>
+    </h4>
+    <h4>Rating : <%= element.rating %> <%if(element.rating === 5){%>⭐<%}%></h4>
+    <%= element.details %>
+    <hr
+      style="
+        border: none;
+        border-top: 3px dotted #ccc;
+        height: 1px;
+        margin: 20px 0;
+      "
+    />
+    <% } %> <% }); %>
+    <br />
+    <hr
+      style="
+        border: none;
+        border-top: 3px solid red;
+        height: 3px;
+        margin: 20px 0;
+      "
+    />
+    <h2>Sides</h2>
+    <% RESTAURANT.menu.forEach(element => { %> <% if (element.category ===
+    'sides'){ %>
+    <h4>
+      <%= element.name %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i> PRICE : $ <%= element.price %> </i>
+    </h4>
+    <h4>Rating : <%= element.rating %> <%if(element.rating === 5){%>⭐<%}%></h4>
+    <%= element.details %>
+    <hr
+      style="
+        border: none;
+        border-top: 3px dotted #ccc;
+        height: 1px;
+        margin: 20px 0;
+      "
+    />
+    <% } %> <% }); %>
+    <br />
+    <hr
+      style="
+        border: none;
+        border-top: 3px solid red;
+        height: 3px;
+        margin: 20px 0;
+      "
+    />
+  </body>
+</html>

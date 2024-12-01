@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= category %></title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+    <h1><%= category %></h1>
+    <hr
+      style="
+        border: none;
+        border-top: 3px solid red;
+        height: 3px;
+        margin: 20px 0;
+      "
+    />
+    <% menuItems.forEach(element => { %>
+    <h4>
+      <%= element.name %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i> PRICE : $ <%= element.price %> </i>
+    </h4>
+    <h4>Rating : <%= element.rating %> <%if(element.rating === 5){%>⭐<%}%></h4>
+    <%= element.details %>
+    <hr
+      style="
+        border: none;
+        border-top: 3px dotted #ccc;
+        height: 1px;
+        margin: 20px 0;
+      "
+    />
+    <% }); %>
+    <br />
+    <hr
+      style="
+        border: none;
+        border-top: 3px solid red;
+        height: 3px;
+        margin: 20px 0;
+      "
+    />
+  </body>
+</html>
